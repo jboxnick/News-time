@@ -10,7 +10,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         newAPI.delegate = self
         newAPI.fetchData()
-//        imageView.downloaded(from: "https://apod.nasa.gov/apod/image/2209/m51_l2_1024.jpg")
+        imageView.layer.cornerRadius = 30
+        TitleView.layoutMargins = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        //imageView.downloaded(from: "https://apod.nasa.gov/apod/image/2209/m51_l2_1024.jpg")
+        newAPI.getData()
+        newAPI.fetchNews()
+        newAPI.newFetchDataFunc()
+
 
     }
       var newAPI = NewAPI()
@@ -27,6 +33,7 @@ extension ViewController: NewAPIDelegate {
         DispatchQueue.main.async {
             self.TitleView.text  = orbitNew.title
             self.textView.text   = orbitNew.explanation
+            self.imageView.downloaded(from: orbitNew.url)
     }
 }
 
