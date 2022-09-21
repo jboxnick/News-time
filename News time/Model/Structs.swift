@@ -1,5 +1,7 @@
 import Foundation
+
 struct OrbitNew: Codable {
+    
     var url         : String
     var title       : String
     var explanation : String
@@ -7,6 +9,7 @@ struct OrbitNew: Codable {
 }
 
 struct AstronomyNew: Codable {
+    
     var publishedAt         : String
     var summary             : String
     var newsSite            : String
@@ -16,8 +19,8 @@ struct AstronomyNew: Codable {
     
 }
 
-
 struct SpaceDataFardaLawla: Codable, Identifiable {
+    
     var id: Int
     var publishedAt         : String
     var summary             : String
@@ -27,8 +30,8 @@ struct SpaceDataFardaLawla: Codable, Identifiable {
     var imageUrl            : String
 }
 
-
 struct SpaceData: Codable, Identifiable {
+    
     var id: Int
     var publishedAt         : String
     var summary             : String
